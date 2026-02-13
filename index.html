@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PMR SMAN 2 Pamekasan | Parasmada</title>
+  <meta name="description" content="Website resmi Palang Merah Remaja (PMR) Wira SMAN 2 Pamekasan. Temukan seputar informasi kegiatan, dokumentasi, dan event mendatang">
+  <meta name="keywords" content="PMR, Palang Merah Remaja, SMAN 2 Pamekasan, Parasmada, parasmada , PMR Wira, pmrsman2pamekasan , ekstrakurikuler pmr">
+  <meta name="author" content="Bidang IT PMR SMAN 2 Pamekasan">
+  <meta property="og:title" content="PMR SMAN 2 Pamekasan - Parasmada" />
+  <meta property="og:description" content="Kunjungi website resmi PMR Wira SMAN 2 Pamekasan untuk informasi kegiatan dan semangat kemanusiaan." />
+  <meta property="og:image" content="https://pmrsman2pamekasan.mikorayuki.my.id/fotoprofileparasmada.jpg" />
+  <meta property="og:url" content="https://pmrsman2pamekasan.mikorayuki.my.id/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PMR SMAN 2 Pamekasan - Parasmada" />
+  <meta name="twitter:description" content="Website resmi PMR Wira SMADA. Mari berkontribusi dalam kemanusiaan." />
+  <meta name="twitter:image" content="https://pmrsman2pamekasan.mikorayuki.my.id/fotoprofileparasmada.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <canvas id="particle-canvas"></canvas>
+  <main class="container animate-in">
+    <div class="content-wrapper">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Logo_of_Indonesian_Red_Cross.svg/1200px-Logo_of_Indonesian_Red_Cross.svg.png" alt="Logo PMI" class="logo"/>
+      <div class="text-box">
+        <h1><span class="typed-welcome"></span></h1>
+        <h2 class="fade-in delay-1">Di Website</h2>
+        <h2 class="fade-in delay-2">PALANG MERAH REMAJA</h2>
+        <h2 class="fade-in delay-3">SMAN 2 PAMEKASAN</h2>
+        <h2 class="type-box"><span class="text"></span></h2>
+      </div>
+      <a href="/wp" class="masuk-button" onclick="document.getElementById('clicksound').play()">MASUK</a>
+      <audio id="clicksound" src="click.mp3" preload="auto"></audio>
+    </div>
+  </main>
+  <div id="quote-popup" class="quote-box">"Menolong sesama adalah cermin kemanusiaan." - PMI</div>
+  <footer class="footer-text">Web by Bidang IT @2024 | <a href="https://mikorayuki.my.id" target="_blank" style="color: #aaa; text-decoration: none;">ZF</a></footer>
+  <script src="particles.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed(".typed-welcome", {
+      strings: ["Selamat Datang"],
+      typeSpeed: 100,
+      backSpeed: 0,
+      backDelay: 1000,
+      showCursor: false,
+      loop: false
+    });
+    new Typed(".text", {
+      strings: ["parasmada", "pmrsman2pamekasan"],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true
+    });
+    setTimeout(() => {
+      document.getElementById("quote-popup").classList.add("show");
+    }, 10000);
+  </script>
+</body>
+</html>

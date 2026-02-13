@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 - Halaman Tidak Ditemukan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #7f1d1d, #b91c1c);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      animation: fadeIn 1s ease;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background-color: #fff;
+      color: #b91c1c;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ffe4e6;
+      color: #7f1d1d;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = "https://pmrsman2pamekasan.mikorayuki.my.id/wp";
+    }, 5000);
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="image-wrapper">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Logo_of_Indonesian_Red_Cross.svg/1200px-Logo_of_Indonesian_Red_Cross.svg.png" alt="PMR WIRA SMAN 2 PAMEKASAN">
+    </div>
+    <h1>Halaman yang kamu cari tidak ada</h1>
+    <p>Ups! Halaman ini tidak tersedia.<br>Anda akan diarahkan ke halaman utama dalam 5 detik.</p>
+    <a href="https://pmrsman2pamekasan.mikorayuki.my.id/wp" class="btn">Kembali ke Beranda</a>
+  </div>
+</body>
+</html>

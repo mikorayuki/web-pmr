@@ -1,0 +1,166 @@
+/* style.css updated with animation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  background: #1a0000;
+  color: white;
+  position: relative;
+}
+.background-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, #cc0000, #330000);
+  z-index: 0;
+  filter: blur(80px);
+  animation: bgFloat 12s ease-in-out infinite alternate;
+}
+@keyframes bgFloat {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.2); opacity: 0.6; }
+}
+#particle-canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+.container {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  z-index: 1;
+  position: relative;
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  width: 110px;
+  margin-bottom: 15px;
+  animation: logoBounce 1.5s ease-out forwards;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+}
+@keyframes logoBounce {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+.text-box h1, h2 {
+  margin-bottom: 5px;
+}
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid #fff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .08em;
+  animation: typing 2.5s steps(25, end), blink .8s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+.type-box {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+  min-height: 30px;
+}
+.masuk-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 45px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 40px;
+  background: #cc0000;
+  color: white;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 15px #660000, 0 0 30px #990000, inset 0 0 10px #ff1a1a;
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px #660000, 0 0 20px #cc0000, inset 0 0 5px #ff1a1a; }
+  50% { box-shadow: 0 0 25px #cc0000, 0 0 45px #ff3333, inset 0 0 15px #ff1a1a; }
+  100% { box-shadow: 0 0 10px #660000, 0 0 20px #cc0000, inset 0 0 5px #ff1a1a; }
+}
+.masuk-button:hover {
+  transform: scale(1.05);
+  background: #ff1a1a;
+}
+.footer-text {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  animation: fadeFooter 6s ease-in-out infinite;
+}
+@keyframes fadeFooter {
+  0% { opacity: 0; transform: translateY(10px); }
+  20% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+.delay-1 { animation-delay: 1.5s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 2.5s; }
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.quote-box {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #cc0000;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  box-shadow: 0 0 15px #990000;
+  font-size: 0.9rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.8s ease;
+  z-index: 10;
+}
+.quote-box.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.animate-in {
+  animation: fadeUp 1s ease-out;
+}
